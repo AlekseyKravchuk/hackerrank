@@ -1,6 +1,7 @@
 """ https://www.hackerrank.com/challenges/py-collections-deque/problem """
 
 from collections import deque
+import sys
 
 
 def main():
@@ -11,6 +12,8 @@ def main():
             exec(f'q.{line[0]}({line[1]})')
         elif len(line) == 1:
             exec(f'q.{line[0]}()')
+        else:
+            sys.exit('Wrong number of arguments')
     for elm in q:
         print(elm, end=' ')
 

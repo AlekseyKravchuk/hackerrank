@@ -1,0 +1,12 @@
+11
+story
+lena
+duplicate
+story
+jane
+lena
+alex
+suzan
+jane
+dmitry
+lena
