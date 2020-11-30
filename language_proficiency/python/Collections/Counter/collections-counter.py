@@ -5,19 +5,15 @@ from collections import Counter
 
 def main():
     num_shoes = int(input())
-    sizes = Counter([int(x) for x in input().strip().split()][:num_shoes])
-    total_earn = 0
+    shoes_sizes = Counter(map(int, input().split()))
+    num_customers = int(input())
 
-    for i in range(int(input())):
-        I = input().split()
-        unit = int(I[0])
-        price = int(I[1])
-
-        if sizes[unit] > 0:
-            sizes[unit] -= 1
-            total_earn += price
-
-    print(total_earn)
+    total = 0
+    for i in range(num_customers):
+        requested_size, price, *_ = list(map(int, input().split()))
+        total += price * (shoes_sizes[requested_size] > 0)
+        shoes_sizes[requested_size] -= 1
+    print(total)
 
 
 if __name__ == '__main__':
