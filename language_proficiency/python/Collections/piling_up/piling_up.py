@@ -16,13 +16,6 @@ def check_if_pile_possible(dq):
     return True
 
 
-def print_wrapper(v):
-    if v:
-        print('Yes')
-    else:
-        print('No')
-
-
 def main():
     sideLengths = []
     n_tests = int(input())
@@ -30,7 +23,7 @@ def main():
         _ = int(input())
         sideLengths.append(deque([int(length) for length in input().split()]))
     for dq in sideLengths:
-        print_wrapper(check_if_pile_possible(dq))
+        print('Yes' if check_if_pile_possible(dq) else 'No')
 
 
 if __name__ == '__main__':

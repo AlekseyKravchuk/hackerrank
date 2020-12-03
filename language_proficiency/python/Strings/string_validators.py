@@ -1,18 +1,12 @@
 """ https://www.hackerrank.com/challenges/string-validators/problem """
 
-
-def has_any(string):
-    funcs = ['isalnum()', 'isalpha()', 'isdigit()', 'islower()', 'isupper()']
-
-    for func in funcs:
-        for idx, char in enumerate(string):
-            if eval(f'\'{char}\'.{func}'):
-                print('True')
-                break
-            elif idx == len(string) - 1:
-                print('False')
-
-
 if __name__ == '__main__':
     s = input()
-    has_any(s)
+    funcs = [lambda x: x.isalnum(),
+             lambda x: x.isalpha(),
+             lambda x: x.isdigit(),
+             lambda x: x.islower(),
+             lambda x: x.isupper()]
+    for f in funcs:
+        print(bool(sum(map(f, s))))
+        # print('True' if sum(map(f, string)) else 'False')
