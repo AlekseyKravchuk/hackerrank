@@ -23,7 +23,8 @@ def main():
         _ = int(input())
         sideLengths.append(deque([int(length) for length in input().split()]))
     for dq in sideLengths:
-        print('Yes' if check_if_pile_possible(dq) else 'No')
+        print(('No', 'Yes')[check_if_pile_possible(dq)])
+        # print('Yes' if check_if_pile_possible(dq) else 'No')
 
 
 if __name__ == '__main__':
