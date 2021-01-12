@@ -10,6 +10,7 @@ permutations = [[i, j, k]
                 for i in [i for i in range(x + 1)]
                 for j in [i for i in range(y + 1)]
                 for k in [i for i in range(z + 1)] if (i+j+k) != n]
+
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # The code above is equivalent to the following:
 # permutations = []
