@@ -7,8 +7,8 @@ def minion_game(word):
     length = len(word)
     score = {'Kevin': 0,
              'Stuart': 0}
-    vowels = {'A', 'E', 'I', 'O', 'U'}                   # for Kevin
-    consonants = set(string.ascii_uppercase) - (vowels)  # for Stuart
+    vowels = {'A', 'E', 'I', 'O', 'U'}                 # for Kevin
+    consonants = set(string.ascii_uppercase) - vowels  # for Stuart
 
     for pos, letter in enumerate(word):
         points = (length - pos)
